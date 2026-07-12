@@ -32,10 +32,10 @@ describe('App', () => {
     axios.post.mockResolvedValue({ data: { id: 1, title: 'New task', completed: false } });
 
     render(<App />);
-    const input = screen.getByRole('textbox');
+    const input = screen.getByPlaceholderText('Adaugă un task nou...');
     await userEvent.type(input, 'New task');
 
-    const button = screen.getByRole('button', { name: /add/i });
+    const button = screen.getByRole('button', { name: 'Adaugă' });
     await userEvent.click(button);
 
     await waitFor(() => {
