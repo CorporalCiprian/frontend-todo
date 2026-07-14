@@ -5,7 +5,7 @@ on:
     types: [closed]
   
 jobs:
-  version_backend:
+  version_frontend:
     permissions:
       contents: write
     if: github.event.pull_request.merged == true
