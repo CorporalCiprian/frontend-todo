@@ -20,7 +20,7 @@ function App() {
       console.error("Eroare la preluarea datelor:", error)
     }
   }, [])
-  //test
+  
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchTodos()
