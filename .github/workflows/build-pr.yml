@@ -6,7 +6,7 @@ on:
 
 jobs:
   build_node:
-    uses: CorporalCiprian/todo-template/.github/workflows/build-template.yml@main
+    uses: CorporalCiprian/todo-template/.github/workflows/node/build-and-test.yml@main
     with: 
       language: 'node'
-      version: '20'
+      version: '24'
