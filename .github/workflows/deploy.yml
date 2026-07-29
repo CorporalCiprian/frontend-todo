@@ -8,7 +8,7 @@ jobs:
     uses: CorporalCiprian/todo-template/.github/workflows/deploy-app-node.yml@main
     with:
       env: Test
-      deploy: false
+      deploy: true
       node-version: '24'
     secrets:
       AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
