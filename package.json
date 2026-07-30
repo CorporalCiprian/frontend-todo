@@ -1,6 +1,6 @@
 {
   "name": "todo-frontend",
-  "main": "src/functions/*.js",
+  "main": "src/functions/*.cjs",
   "private": true,
   "version": "0.0.0",
   "type": "module",
