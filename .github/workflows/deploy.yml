@@ -3,6 +3,10 @@ on:
     tags:
       - v*
 
+permissions:
+  id-token: write
+  contents: read
+  
 jobs:
   deploy_to_test:
     uses: CorporalCiprian/todo-template/.github/workflows/deploy-container-app-node.yml@main
