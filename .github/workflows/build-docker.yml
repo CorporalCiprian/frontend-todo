@@ -1,0 +1,26 @@
+name: Docker Build
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        required: false
+        type: string
+        default: null
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build_docker:
+    uses: CorporalCiprian/todo-template/.github/workflows/docker-build.yml@main
+    with:
+      AZURE_CONTAINER_REGISTRY: crtododev
+      tag: ${{ inputs.tag }}
+    secrets:
+      AZURE_REGISTRY_USERNAME: ${{ secrets.AZURE_REGISTRY_USERNAME }}
+      AZURE_REGISTRY_PASSWORD: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
+
+  
