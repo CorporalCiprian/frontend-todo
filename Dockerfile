@@ -12,7 +12,7 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:alpine AS production
+FROM nginx:alpine AS deploy
 
 COPY --from=build /app/dist /usr/share/nginx/html
 
