@@ -2,7 +2,7 @@ FROM node:24.0 AS build
 
 WORKDIR /app
 
-ENV VITE_API_URL='https://ca-backend-todo-dev.whitesmoke-f94160ee.westeurope.azurecontainerapps.io'
+ENV VITE_API_URL='https://ca-backend-todo-dev.delightfulwave-91558e9c.westeurope.azurecontainerapps.io'
 
 COPY package.json package-lock.json ./
 
